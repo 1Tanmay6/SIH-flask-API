@@ -10,7 +10,7 @@ print('=-=' * 80)
 print("Loading flask application...")
 print('=-=' * 80)
 app = Flask(__name__)
-
+"""
 inp = 0
 
 print('=-=' * 80)
@@ -54,9 +54,9 @@ def paper_maker(str):
     print(paper['title'])
     return paper
 
+"""
 
-
-
+"""
 @app.route('/answer', methods=['GET', 'POST'])
 def answer():
     curent_output = ''
@@ -72,13 +72,15 @@ def answer():
     print(curent_output)
     return curent_output
 
-
+"""
 @app.route('/similarity', methods=['GET', 'POST'])
 def similarity():
     filename = request.args.get('filename')
     file_path = request.args.get('file_path')
     #? http://192.168.7.114:5000/similarity?filename=pcu&file_path=/home/tanmaypatil/Documents/API/similarity/similarity_content
-    return cs.percentages(filename, file_path)
+    return {
+        'res':cs.percentages(filename, file_path)
+    } 
 
 @app.route('/guide_ratio', methods=['GET', 'POST'])
 def guide_ratio():
@@ -144,14 +146,16 @@ def guide_ratio():
     students = [student.to_dict() for student in st]
 
 
-
-
-    return gr.match_students_teachers(students=students, teachers=teachers)
+    return {
+        'res':gr.match_students_teachers(students=students, teachers=teachers)
+    }
 
 @app.route('/buddy_matching', methods=['GET', 'POST'])
 def buddy_matching():
     output_list = buddy.output_list_maker()
-    return output_list
+    return {
+        'res':output_list
+    }
 
 
 
