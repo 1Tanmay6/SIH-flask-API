@@ -1,0 +1,60 @@
+{"name": "Student1", "domain": ["Machine Learning"]}
+{"name": "Student2", "domain": ["Computer Vision"]}
+{"name": "Student3", "domain": ["Data Science"]}
+{"name": "Student4", "domain": ["Machine Learning", "Computer Vision"]}
+{"name": "Student5", "domain": ["Data Science", "Machine Learning"]}
+{"name": "Student6", "domain": ["Computer Vision", "Data Science"]}
+{"name": "Student7", "domain": ["Machine Learning", "Data Science"]}
+{"name": "Student8", "domain": ["Computer Vision"]}
+{"name": "Student9", "domain": ["Machine Learning"]}
+{"name": "Student10", "domain": ["Data Science"]}
+{"name": "Student11", "domain": ["Computer Vision"]}
+{"name": "Student12", "domain": ["Data Science"]}
+{"name": "Student13", "domain": ["Machine Learning"]}
+{"name": "Student14", "domain": ["Computer Vision", "Data Science"]}
+{"name": "Student15", "domain": ["Machine Learning"]}
+{"name": "Student16", "domain": ["Data Science", "Computer Vision"]}
+{"name": "Student17", "domain": ["Machine Learning", "Data Science"]}
+{"name": "Student18", "domain": ["Machine Learning"]}
+{"name": "Student19", "domain": ["Computer Vision"]}
+{"name": "Student20", "domain": ["Data Science"]}
+{"name": "Student21", "domain": ["Machine Learning", "Computer Vision"]}
+{"name": "Student22", "domain": ["Data Science", "Machine Learning"]}
+{"name": "Student23", "domain": ["Computer Vision"]}
+{"name": "Student24", "domain": ["Data Science"]}
+{"name": "Student25", "domain": ["Machine Learning", "Data Science"]}
+{"name": "Student26", "domain": ["Computer Vision"]}
+{"name": "Student27", "domain": ["Machine Learning"]}
+{"name": "Student28", "domain": ["Data Science"]}
+{"name": "Student29", "domain": ["Computer Vision"]}
+{"name": "Student30", "domain": ["Data Science"]}
+{"name": "Student31", "domain": ["Machine Learning"]}
+{"name": "Student32", "domain": ["Computer Vision"]}
+{"name": "Student33", "domain": ["Data Science"]}
+{"name": "Student34", "domain": ["Machine Learning", "Computer Vision"]}
+{"name": "Student35", "domain": ["Data Science", "Machine Learning"]}
+{"name": "Student36", "domain": ["Computer Vision", "Data Science"]}
+{"name": "Student37", "domain": ["Machine Learning", "Data Science"]}
+{"name": "Student38", "domain": ["Computer Vision"]}
+{"name": "Student39", "domain": ["Machine Learning"]}
+{"name": "Student40", "domain": ["Data Science"]}
+{"name": "Student41", "domain": ["Computer Vision"]}
+{"name": "Student42", "domain": ["Data Science"]}
+{"name": "Student43", "domain": ["Machine Learning"]}
+{"name": "Student44", "domain": ["Computer Vision", "Data Science"]}
+{"name": "Student45", "domain": ["Machine Learning"]}
+{"name": "Student46", "domain": ["Data Science", "Computer Vision"]}
+{"name": "Student47", "domain": ["Machine Learning", "Data Science"]}
+{"name": "Student48", "domain": ["Machine Learning"]}
+{"name": "Student49", "domain": ["Computer Vision"]}
+{"name": "Student50", "domain": ["Data Science"]}
+{"name": "Student51", "domain": ["Machine Learning", "Computer Vision"]}
+{"name": "Student52", "domain": ["Data Science", "Machine Learning"]}
+{"name": "Student53", "domain": ["Computer Vision"]}
+{"name": "Student54", "domain": ["Data Science"]}
+{"name": "Student55", "domain": ["Machine Learning", "Data Science"]}
+{"name": "Student56", "domain": ["Computer Vision"]}
+{"name": "Student57", "domain": ["Aerospace Engineering", "Operations Research"]}
+{"name": "Student58", "domain": ["Data Science"]}
+{"name": "Student59", "domain": ["Computer Vision"]}
+{"name": "Student60", "domain": ["Data Science"]}
