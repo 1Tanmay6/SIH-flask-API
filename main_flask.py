@@ -96,47 +96,47 @@ def guide_ratio():
 
     db_st = [{
         'name': 'Megha',
-        'pref': ['alice', 'bob', 'james'],
+        'pref': ['ai_ml','ds','iot'],
     },
 
     {
         'name': 'Shounak',
-        'pref': ['alice', 'bob', 'james1'],
+        'pref': ['chemical','testtubes','bioinformatics'],
     },
     {
         'name': 'Nayra',
-        'pref': ['alice','james1','james'],
+        'pref': ['ai_ml','ds','iot'],
     },
     {
         'name': 'Navya',
-        'pref': ['alice','james1','james'],
+        'pref': ['chemical','testtubes','bioinformatics'],
     },
     {
         'name': 'Navya1',
-        'pref': ['alice','james1','james'],
+        'pref': ['ai_ml','ds','iot'],
     },
     {
             'name': 'Navya2',
-            'pref': ['alice','james1','james'],
+            'pref': ['ai_ml','ds','iot'],
     }]
 
 
 
     db_te = [  {
             'name': 'james',
-            'pref': ['Megha', 'Tanmay', 'jhattu'],
-            'count': 9  # Assuming a teacher can take 2 students
+            'pref': ['chemical','testtubes','bioinformatics'],
+            'count': 5  # Assuming a teacher can take 2 students
         },
 
         {
             'name': 'james1',
-            'pref': ['jhattu', 'Shounak', 'jhatti'],
+            'pref': ['ai_ml','ds','iot'],
             'count': 1  # Assuming a teacher can take 1 student
         },
         {
             'name' : 'Joseph',
-            'pref': ['abc','def','ghi'],
-            'count': 3
+            'pref': ['ai_ml','ds','iot'],
+            'count': 1
         } ]
 
     te = [Person(te['name'], te['pref'], te['count']) for te in db_te]
