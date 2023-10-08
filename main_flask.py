@@ -5,22 +5,29 @@ import json
 from similarity import cosine_similarity as cs
 from guide_ratio import student_guide_matching as gr
 from buddymatching import buddymatching as buddy
+from flask_cloudflared import run_cloudflared
 
-print('=-=' * 80)
+
+print('=-=' * 20)
 print("Loading flask application...")
-print('=-=' * 80)
+
 app = Flask(__name__)
+print('=-=' * 20)
+print("Creating a Tunneled Link...")
+
+url = run_cloudflared(port=5000, metrics_port=8100) 
+
 """
 inp = 0
 
-print('=-=' * 80)
+
 print("Loading model...")
-print('=-=' * 80)
+print('=-=' * 20)
 llm = Llama(model_path="llama-2-7b-chat.ggmlv3.q8_0.bin", n_ctx=256)
 
-print('=-=' * 80)
+
 print("Model loaded.")
-print('=-=' * 80)
+print('=-=' * 20)
 
 def answer_giver(str):
     prompt = "Q: " + str + " A: "
@@ -68,7 +75,7 @@ def answer():
     print(curent_output)
     json_str = json.dumps(paper_maker(curent_output))
     curent_output = json.loads(json_str)
-    print("=-=" * 80)
+    print("=-=" * 20)
     print(curent_output)
     return curent_output
 
@@ -166,31 +173,7 @@ def index():
 
 
 if __name__ == '__main__':
-     app.run(host='0.0.0.0', port=5000, debug=True)
-
-
-
-#! Later code
-# input_str = 'Sure, here is a research paper on the topic of quantum physics in the format you requested: Title: "Exploring the Quantum Realm: A Review of Recent Advances in Quantum Physics" Abstract: "Quantum physics has been a rapidly developing field over the past few decades, with many exciting advancements in our understanding of the behavior of matter and energy at the smallest scales. Here, we review some of the most recent developments in the field, including the observation of quantum gravity, the discovery of new states of matter, and the realization of quantum supremacy. We also discuss the potential applications of these advancements in fields such as cryptography, computing, and materials science." Link: <https://journals.aps.org/prx/pdf/2018/05/100301>'
-
-# # Extract the title, abstract, and link from the input string
-# title_start = input_str.find('Title: "') + len('Title: "')
-# title_end = input_str.find('" Abstract:')
-# title = input_str[title_start:title_end]
-
-# abstract_start = input_str.find('Abstract: "') + len('Abstract: "')
-# abstract_end = input_str.find('" Link:')
-# abstract = input_str[abstract_start:abstract_end]
-
-# link_start = input_str.find('Link: <') + len('Link: <')
-# link_end = input_str.find('>')
-# link = input_str[link_start:link_end]
-
-# # Create a dictionary with the extracted information
-# paper = {
-#     "title": title,
-#     "abstract": abstract,
-#     "link": link
-# }
-
-# print(paper)
+    print('=-=' * 20)
+    print('Use this: ' + url)
+    print('=-=' * 20)
+    app.run()
