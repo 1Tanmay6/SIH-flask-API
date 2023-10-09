@@ -5,7 +5,7 @@ import json
 from similarity import cosine_similarity as cs
 from guide_ratio import student_guide_matching as gr
 from buddymatching import buddymatching as buddy
-from flask_cloudflared import run_cloudflared
+from custom_flask_cloudflared import create_tunnel as ct
 
 
 print('=-=' * 20)
@@ -15,7 +15,7 @@ app = Flask(__name__)
 print('=-=' * 20)
 print("Creating a Tunneled Link...")
 
-url = run_cloudflared(port=5000, metrics_port=8100) 
+url = ct.run_cloudflared(port=5000, metrics_port=8100) 
 
 """
 inp = 0
