@@ -6,7 +6,9 @@ from similarity import cosine_similarity as cs
 from guide_ratio import student_guide_matching as gr
 from buddymatching import buddymatching as buddy
 from custom_flask_cloudflared import create_tunnel as ct
-
+from langchain.llms import Ollama
+from langchain.callbacks.manager import CallbackManager
+from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler  
 
 print('=-=' * 20)
 print("Loading flask application...")
@@ -17,69 +19,24 @@ print("Creating a Tunneled Link...")
 
 url = ct.run_cloudflared(port=5000, metrics_port=8100) 
 
-"""
-inp = 0
 
-
-print("Loading model...")
-print('=-=' * 20)
-llm = Llama(model_path="llama-2-7b-chat.ggmlv3.q8_0.bin", n_ctx=256)
-
-
-print("Model loaded.")
-print('=-=' * 20)
-
-def answer_giver(str):
-    prompt = "Q: " + str + " A: "
-    output = llm(prompt,  max_tokens=0)
-    return output["choices"][0]['text'].split("A:")[0]
-
-def paper_maker(str):
-    cleaned_input = ' '.join(str.split()).replace('\\', '')
-
-
-    # Extract the title, abstract, and link from the cleaned input string
-    title_start = cleaned_input.find('Title: "') + len('Title: "')
-    title_end = cleaned_input.find('" Abstract:')
-    title = cleaned_input[title_start:title_end]
-
-    abstract_start = cleaned_input.find('Abstract: ') + len('Abstract: ')
-    abstract_end = cleaned_input.find(' Link:')
-    abstract = cleaned_input[abstract_start:abstract_end]
-
-    link_start = cleaned_input.find('Link: <') + len('Link: <')
-    link_end = cleaned_input.find('>', link_start)
-    link = cleaned_input[link_start:link_end]
-
-    # Create a dictionary with the extracted information
-    paper = {
-        "title": title,
-        "abstract": abstract,
-        "link": link
-    }
-
-    print(paper['title'])
-    return paper
-
-"""
-
-"""
 @app.route('/answer', methods=['GET', 'POST'])
 def answer():
-    curent_output = ''
-    # if request.method == 'GET':
-    #! curent_output = answer_giver("give me 1 research paper on the topic of erectile dysfunction give me answer in format Title: 'title', abstract: 'abstract of that paper' and link: 'link of the paper' and make this in form of python dictonary becuase your response is going to be sent to database so dont write anything extra")
-    curent_output = answer_giver("give me 1 research paper on the topic of erectile dysfunction give me answer in format Title: 'title', abstract: 'abstract of that paper' and link: 'link of the paper' and make this in form of python dictonary becuase your response is going to be sent to database so dont write anything extra")
-    while curent_output == '':
-        pass
-    print(curent_output)
-    json_str = json.dumps(paper_maker(curent_output))
-    curent_output = json.loads(json_str)
-    print("=-=" * 20)
-    print(curent_output)
-    return curent_output
+    # query params extraction
+    prompt = request.args.get('prompt')
+    llm = Ollama(model="mistral", 
+                callback_manager=CallbackManager([StreamingStdOutCallbackHandler()]))
+    answer = llm(prompt, max_tokens=5, stop="###")
 
-"""
+    # Convert the string response to a Python dictionary
+    data = json.loads(answer)
+
+    # Return the dictionary as a JSON response
+    return jsonify(data)
+
+#! Give me 2 research paper on breast cancer give everything in a list of {} include title,author,year,abstract of at max 30 words, link and all the list should be in a object {res: } make it parsable by json.loads dont write anything else in the response or add qoutes or anything else
+
+
 @app.route('/getSimilarities', methods=['GET', 'POST'])
 def similarity():
     filename = request.args.get('filename')

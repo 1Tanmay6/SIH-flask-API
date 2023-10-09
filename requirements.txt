@@ -2,4 +2,5 @@ llama-cpp-python==0.1.77
 flask
 PyPDF2
 pysimilar
+langchain
 
