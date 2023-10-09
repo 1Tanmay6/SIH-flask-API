@@ -80,7 +80,7 @@ def answer():
     return curent_output
 
 """
-@app.route('/similarity', methods=['GET', 'POST'])
+@app.route('/getSimilarities', methods=['GET', 'POST'])
 def similarity():
     filename = request.args.get('filename')
     file_path = request.args.get('file_path')
@@ -89,7 +89,7 @@ def similarity():
         'res':cs.percentages(filename, file_path)
     } 
 
-@app.route('/guide_ratio', methods=['GET', 'POST'])
+@app.route('/getGuideRatio', methods=['GET', 'POST'])
 def guide_ratio():
     class Person:
         def __init__(self, name, pref, count=None):
@@ -157,7 +157,7 @@ def guide_ratio():
         'res':gr.match_students_teachers(students=students, teachers=teachers)
     }
 
-@app.route('/buddy_matching', methods=['GET', 'POST'])
+@app.route('/getBuddies', methods=['GET', 'POST'])
 def buddy_matching():
     output_list = buddy.output_list_maker()
     return {
