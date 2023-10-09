@@ -1,0 +1,91 @@
+
+Top of Form
+Search BritannicaClick here to search
+Bottom of Form
+Login
+Subscribe
+HomeQuizzes & GamesHistory & SocietyScience & TechBiographiesAnimals & NatureGeography & TravelArts & CultureMoneyVideos
+optimization
+Table of Contents
+* Introduction
+* Linear programming
+* Nonlinear programming
+References & Edit HistoryRelated Topics
+Images
+
+For Students
+
+optimization summary
+Related Questions
+* Who are the most well-known computer scientists?
+* Is computer science used in video games?
+* How do I learn computer science?
+* What is algebra?
+Read Next
+
+Influential Computer Programming Languages
+
+Navajo Code Talkers Infographic
+Discover
+
+The Great Molasses Flood and 6 Other Strange Disasters
+
+What Is Gaslighting?
+
+The Death of Shakespeare
+
+Are There Really Right-Brained and Left-Brained People?
+
+Timeline of the American Revolution
+
+What's Inside the Pyramid at Chichén Itzá?
+
+New Seven Wonders of the World
+HomeScienceMathematics
+Science & Tech
+optimization
+mathematics
+Print Cite Share Feedback 
+Written by 
+
+
+Stephen J. Wright
+Fact-checked by 
+
+
+The Editors of Encyclopaedia Britannica
+Last Updated: Sep 20, 2023 • Article History
+
+optimization problem
+See all media
+Category: Science & Tech
+Key People:
+ 
+Richard Karp
+Related Topics:
+ 
+game theory control theory mathematical programming minimax value maximin value
+...(Show more)
+See all related content ?
+optimization, also known as mathematical programming, collection of mathematical principles and methods used for solving quantitative problems in many disciplines, including physics, biology, engineering, economics, and business. The subject grew from a realization that quantitative problems in manifestly different disciplines have important mathematical elements in common. Because of this commonality, many problems can be formulated and solved by using the unified set of ideas and methods that make up the field of optimization.
+The historical term mathematical programming, broadly synonymous with optimization, was coined in the 1940s before programming became equated with computer programming. Mathematical programming includes the study of the mathematical structure of optimization problems, the invention of methods for solving these problems, the study of the mathematical properties of these methods, and the implementation of these methods on computers. Faster computers have greatly expanded the size and complexity of optimization problems that can be solved. The development of optimization techniques has paralleled advances not only in computer science but also in operations research, numerical analysis, game theory, mathematical economics, control theory, and combinatorics.
+Optimization problems typically have three fundamental elements. The first is a single numerical quantity, or objective function, that is to be maximized or minimized. The objective may be the expected return on a stock portfolio, a company's production costs or profits, the time of arrival of a vehicle at a specified destination, or the vote share of a political candidate. The second element is a collection of variables, which are quantities whose values can be manipulated in order to optimize the objective. Examples include the quantities of stock to be bought or sold, the amounts of various resources to be allocated to different production activities, the route to be followed by a vehicle through a traffic network, or the policies to be advocated by a candidate. The third element of an optimization problem is a set of constraints, which are restrictions on the values that the variables can take. For instance, a manufacturing process cannot require more resources than are available, nor can it employ less than zero resources. Within this broad framework, optimization problems can have different mathematical properties. Problems in which the variables are continuous quantities (as in the resource allocation example) require a different approach from problems in which the variables are discrete or combinatorial quantities (as in the selection of a vehicle route from among a predefined set of possibilities).
+An important class of optimization is known as linear programming. Linear indicates that no variables are raised to higher powers, such as squares. For this class, the problems involve minimizing (or maximizing) a linear objective function whose variables are real numbers that are constrained to satisfy a system of linear equalities and inequalities. Another important class of optimization is known as nonlinear programming. In nonlinear programming the variables are real numbers, and the objective or some of the constraints are nonlinear functions (possibly involving squares, square roots, trigonometric functions, or products of the variables). Both linear and nonlinear programming are discussed in this article. Other important classes of optimization problems not covered in this article include stochastic programming, in which the objective function or the constraints depend on random variables, so that the optimum is found in some "expected," or probabilistic, sense; network optimization, which involves optimization of some property of a flow through a network, such as the maximization of the amount of material that can be transported between two given locations in the network; and combinatorial optimization, in which the solution must be found among a finite but very large set of possible values, such as the many possible ways to assign 20 manufacturing plants to 20 locations.
+Linear programming
+Origins and influences
+Although widely used now to solve everyday decision problems, linear programming was comparatively unknown before 1947. No work of any significance was carried out before this date, even though the French mathematician Joseph Fourier seemed to be aware of the subject's potential as early as 1823. In 1939 a Russian mathematician, Leonid Vitalyevich Kantorovich, published an extensive monograph, Matematicheskie metody organizatsi i planirovaniya proizvodstva ("Mathematical Methods for Organization and Planning of Production"), which is now credited with being the first treatise to recognize that certain important broad classes of scheduling problems had well-defined mathematical structures. Unfortunately, Kantorovich's proposals remained mostly unknown both in the Soviet Union and elsewhere for nearly two decades. Meanwhile, linear programming had developed considerably in the United States and Western Europe. In the period following World War II, officials in the United States government came to believe that efficient coordination of the energies and resources of a whole nation in the event of nuclear war would require the use of scientific planning techniques. The advent of the computer made such an approach feasible.
+Intensive work began in 1947 in the U.S. Air Force. The linear programming model was proposed because it was relatively simple from a mathematical viewpoint, and yet it provided a sufficiently general and practical framework for representing interdependent activities that share scarce resources. In the linear programming model, the modeler views the system to be optimized as being made up of various activities that are assumed to require a flow of inputs (e.g., labour and raw materials) and outputs (e.g., finished goods and services) of various types proportional to the level of the activity. Activity levels are assumed to be representable by nonnegative numbers. The revolutionary feature of the approach lies in expressing the goal of the decision process in terms of minimizing or maximizing a linear objective function-for example, maximizing possible sorties in the case of the air force, or maximizing profits in industry. Before 1947 all practical planning was characterized by a series of authoritatively imposed rules of procedure and priorities. General objectives were never stated, probably because of the impossibility of performing the calculations necessary to minimize an objective function under constraints. In 1947 a method (described in the section The simplex method) was introduced that turned out to solve practical problems efficiently. Interest in linear programming grew rapidly, and by 1951 its use spread to industry. Today it is almost impossible to name an industry that is not using mathematical programming in some form, although the applications and the extent to which it is used vary greatly, even within the same industry.
+
+Get a Britannica Premium subscription and gain access to exclusive content.
+Subscribe Now
+Interest in linear programming has also extended to economics. In 1937 the Hungarian-born mathematician John von Neumann analyzed a steadily expanding economy based on alternative methods of production and fixed technological coefficients. As far as mathematical history is concerned, the study of linear inequality systems excited virtually no interest before 1936. In 1911 a vertex-to-vertex movement along edges of a polyhedron (as is done in the simplex method) was suggested as a way to solve a problem that involved optimization, and in 1941 movement along edges was proposed for a problem involving transportation. Credit for laying much of the mathematical foundations should probably go to von Neumann. In 1928 he published his famous paper on game theory, and his work culminated in 1944 with the publication, in collaboration with the Austrian economist Oskar Morgenstern, of the classic Theory of Games and Economic Behaviour. In 1947 von Neumann conjectured the equivalence of linear programs and matrix games, introduced the important concept of duality, and made several proposals for the numerical solution of linear programming and game problems. Serious interest by other mathematicians began in 1948 with the rigorous development of duality and related matters.
+The general simplex method was first programmed in 1951 for the United States Bureau of Standards SEAC computer. Starting in 1952, the simplex method was programmed for use on various IBM computers and later for those of other companies. As a result, commercial applications of linear programs in industry and government grew rapidly. New computational techniques and variations of older techniques continued to be developed.
+More recently there has been much interest in solving large linear problems with special structures-for example, corporate models and national planning models that are multistaged, are dynamic, and exhibit a hierarchical structure. It is estimated that certain developing countries will have the potential of increasing their gross national product (GNP) by 10 to 15 percent per year if detailed growth models of the economy can be constructed, optimized, and implemented.
+Theory
+Basic ideas
+A simple problem in linear programming is one in which it is necessary to find the maximum (or minimum) value of a simple function subject to certain constraints. An example might be that of a factory producing two commodities. In any production run, the factory produces x1 of the first type and x2 of the second. If the profit on the second type is twice that on the first, then x1 + 2x2 represents the total profit. The function x1 + 2x2 is known as the objective function.
+Clearly the profit will be highest if the factory devotes its entire production capacity to making the second type of commodity. In a practical situation, however, this may not be possible; a set of constraints is introduced by such factors as availability of machine time, labour, and raw materials. For example, if the second type of commodity requires a raw material that is limited so that no more than five can be made in any batch, then x2 must be less than or equal to five; i.e., x2 = 5. If the first commodity requires another type of material limiting it to eight per batch, then x1 = 8. If x1 and x2 take equal time to make and the machine time available allows a maximum of 10 to be made in a batch, then x1 + x2 must be less than or equal to 10; i.e., x1 + x2 = 10.
+
+optimization problem
+Two other constraints are that x1 and x2 must each be greater than or equal to zero, because it is impossible to make a negative number of either; i.e., x1 = 0 and x2 = 0. The problem is to find the values of x1 and x2 for which the profit is a maximum. Any solution can be denoted by a pair of numbers (x1, x2); for example, if x1 = 3 and x2 = 6, the solution is (3, 6). These numbers can be represented by points plotted on two axes, as shown in the figure. On this graph the distance along the horizontal axis represents x1 and that along the vertical represents x2. Because of the constraints given above, the feasible solutions must lie within a certain well-defined region of the graph. For example, the constraint x1 = 0 means that points representing feasible solutions lie on or to the right of the x2 axis. Similarly, the constraint x2 = 0 means that they also lie on or above the x1 axis. Application of the entire set of constraints gives the feasible solution set, which is bounded by a polygon formed by the intersection of the lines x1 = 0, x2 = 0, x1 = 8, x2 = 5, and x1 + x2 = 10. For example, production of three items of commodity x1 and four of x2 is a feasible solution since the point (3, 4) lies in this region. To find the best solution, however, the objective function x1 + 2x2 = k is plotted on the graph for some value of k, say k = 4. This value is indicated by the broken line in the figure. As k is increased, a family of parallel lines are produced and the line for k = 15 just touches the constraint set at the point (5, 5). If k is increased further, the values of x1 and x2 will lie outside the set of feasible solutions. Thus, the best solution is that in which equal quantities of each commodity are made. It is no coincidence that an optimal solution occurs at a vertex, or "extreme point," of the region. This will always be true for linear problems, although an optimal solution may not be unique. Thus, the solution of such problems reduces to finding which extreme point (or points) yields the largest value for the objective function.
+
